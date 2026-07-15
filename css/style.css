@@ -13,6 +13,8 @@ common
   --font-montserrat: "Montserrat", sans-serif;
   --fz18: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
   --fz20: clamp(0.938rem, 0.865rem + 0.32vw, 1.25rem);
+  --fz60: clamp(1.875rem, 1.442rem + 1.92vw, 3.75rem);
+  --fz120: clamp(2.813rem, 1.731rem + 4.81vw, 7.5rem);
 }
 html {
   font-size: 100%;
@@ -400,4 +402,119 @@ header
     width: 12px;
     margin-left: 10px;
   }
+}
+/* =========================
+main visual
+========================= */
+
+.main-visual__content {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+
+.main-visual__copy {
+  position: relative;
+  z-index: 3;
+  padding-top: 200px;
+  padding-left: 5%;
+}
+
+.main-visual__title {
+  margin: 0;
+  font-family: var(--font-yugothic);
+  font-size: var(--fz60);
+  line-height: 1.75;
+}
+
+.main-visual__title span {
+  display: block;
+}
+
+.main-visual__text {
+  font-size: var(--fz18);
+  font-family: var(--font-montserrat);
+  margin-top: 30px;
+}
+
+.main-visual__english {
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  left: 2%;
+  margin: 0;
+  white-space: nowrap;
+  font-size: var(--fz120);
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.main-visual__circle {
+  position: absolute;
+  z-index: 1;
+  top: 300px;
+  right: -10%;
+  width: 968px;
+  height: 968px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #e95513 0%, #f29600 30%, #e95513 100%);
+  animation: circle-rotate 25s linear infinite;
+}
+
+.main-visual__circle::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bgColor);
+}
+
+@keyframes circle-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* PC画像 */
+.main-visual__pc {
+  display: block;
+}
+
+.main-visual__slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.main-visual__slide {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.main-visual__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-visual__slide--01 img {
+  object-position: center center;
+}
+
+.main-visual__slide--02 img {
+  object-position: center center;
+}
+
+.main-visual__slide--03 img {
+  object-position: center center;
+}
+
+/* SP画像 */
+.main-visual__sp {
+  display: none;
 }
