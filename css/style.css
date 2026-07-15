@@ -14,6 +14,9 @@ common
   --fz18: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
   --fz20: clamp(0.938rem, 0.865rem + 0.32vw, 1.25rem);
   --fz60: clamp(1.5rem, 0.981rem + 2.31vw, 3.75rem);
+  --fz80: clamp(1.25rem, 0.385rem + 3.85vw, 5rem);
+  --fz90: clamp(1.375rem, 0.394rem + 4.36vw, 5.625rem);
+  --fz100: clamp(1.875rem, 0.865rem + 4.49vw, 6.25rem);
   --fz120: clamp(2.5rem, 1.346rem + 5.13vw, 7.5rem);
 }
 html {
@@ -27,7 +30,6 @@ body {
   line-height: 1.75;
   letter-spacing: 0;
   color: var(--black);
-  background-color: var(--bgColor);
 }
 
 img {
@@ -70,6 +72,81 @@ li {
   }
 }
 
+/* common line button */
+
+.common-line-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 400px;
+  min-height: 52px;
+  border-bottom: 1px solid #333333;
+  color: #111111;
+}
+
+.common-line-button:hover {
+  opacity: 1;
+}
+
+.common-line-button__text {
+  font-family: var(--font-montserrat);
+  font-size: var(--fz20);
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+/* ボタン下線の右端を基準にする */
+.common-line-button__arrow {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: 0;
+  height: 24px;
+  overflow: visible;
+}
+
+/* hover時に右へ伸びる横線 */
+.common-line-button__line {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #333333;
+  transform-origin: left center;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 矢印先端 */
+.common-line-button__tip {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  display: block;
+  width: 16px;
+  height: 1px;
+  background-color: #333333;
+  transform: rotate(45deg);
+  transform-origin: right center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* hover時 */
+.common-line-button:hover .common-line-button__line {
+  width: 12px;
+}
+
+.common-line-button:hover .common-line-button__tip {
+  transform: translateX(12px) rotate(45deg);
+}
+
+@media only screen and (max-width: 499px) {
+  .common-line-button {
+    min-height: 45px;
+  }
+}
 /* =========================
 header
 ========================= */
@@ -467,7 +544,7 @@ main visual
   position: absolute;
   inset: 3px;
   border-radius: 50%;
-  background: var(--bgColor);
+  background: var(--white);
 }
 
 @keyframes circle-rotate {
@@ -818,16 +895,13 @@ news
 }
 
 .news__link:hover {
-  opacity: 1;
+  opacity: 0.85;
 }
 
 .news__link:hover .news__arrow {
   transform: translateX(8px);
 }
 
-/* =========================
-news responsive
-========================= */
 @media only screen and (max-width: 1279px) {
   .news {
     padding-top: 60px;
@@ -962,5 +1036,246 @@ news responsive
 
   .news__title {
     font-size: 14px;
+  }
+}
+
+/* =========================
+ambition
+========================= */
+.ambition {
+  overflow: hidden;
+  background-color: var(--white);
+  padding: 100px 0 200px;
+}
+
+.ambition__inner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ambition__heading {
+  text-align: center;
+}
+
+.ambition__heading-en {
+  font-family: var(--font-montserrat);
+  font-size: var(--fz80);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.ambition__title {
+  font-size: var(--fz90);
+  font-family: var(--font-yugothic);
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.ambition__lead {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.ambition__lead p {
+  font-size: var(--fz20);
+  font-weight: normal;
+  line-height: 2;
+}
+
+.ambition__lead p + p {
+  margin-top: 24px;
+}
+
+.ambition__content {
+  display: grid;
+  grid-template-columns: 30% minmax(0, 1fr);
+  align-items: end;
+  gap: 20px;
+  margin-top: 60px;
+  padding-left: 7%;
+}
+
+.ambition__body {
+  padding-bottom: 65px;
+}
+
+.ambition__body p {
+  font-size: var(--fz20);
+  font-weight: normal;
+  line-height: 2;
+}
+
+.ambition__body p + p {
+  margin-top: 24px;
+}
+
+.ambition__visual {
+  min-width: 0;
+}
+
+.ambition__image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ambition__image img {
+  display: block;
+  width: 100%;
+  height: 585px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media only screen and (max-width: 1279px) {
+  .ambition {
+    padding: 90px 0 150px;
+  }
+
+  .ambition__lead {
+    margin-top: 50px;
+  }
+
+  .ambition__content {
+    grid-template-columns: 35% minmax(0, 1fr);
+    gap: 30px;
+    margin-top: 55px;
+    padding-left: 5%;
+  }
+
+  .ambition__body {
+    padding-bottom: 45px;
+  }
+
+  .ambition__image img {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .ambition {
+    padding: 80px 0 120px;
+  }
+
+  .ambition__inner {
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .ambition__title {
+    margin-top: 14px;
+  }
+
+  .ambition__lead {
+    margin-top: 45px;
+  }
+
+  .ambition__content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 45px;
+    margin-top: 55px;
+    padding-left: 0;
+  }
+
+  .ambition__body {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .ambition__image img {
+    height: 480px;
+  }
+
+  .ambition__visual .common-line-button {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ambition {
+    padding: 65px 0 90px;
+  }
+
+  .ambition__title {
+    margin-top: 12px;
+  }
+
+  .ambition__lead {
+    margin-top: 38px;
+  }
+
+  .ambition__lead p + p {
+    margin-top: 20px;
+  }
+
+  .ambition__content {
+    margin-top: 45px;
+  }
+
+  .ambition__body {
+    max-width: none;
+  }
+
+  .ambition__body p + p {
+    margin-top: 22px;
+  }
+
+  .ambition__image {
+    width: calc(100% + 20px);
+  }
+
+  .ambition__image img {
+    height: 360px;
+  }
+
+  .ambition__visual .common-line-button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .ambition {
+    padding: 25px 0 60px;
+  }
+
+  .ambition__title {
+    margin-top: 10px;
+  }
+
+  .ambition__lead {
+    margin-top: 32px;
+  }
+
+  .ambition__lead p + p {
+    margin-top: 18px;
+  }
+
+  .ambition__content {
+    gap: 30px;
+    margin-top: 36px;
+  }
+
+  .ambition__body p + p {
+    margin-top: 20px;
+  }
+
+  .ambition__image {
+    width: calc(100% + 16px);
+  }
+
+  .ambition__image img {
+    height: 270px;
+  }
+
+  .ambition__visual .common-line-button__text {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .ambition__image img {
+    height: 235px;
   }
 }
