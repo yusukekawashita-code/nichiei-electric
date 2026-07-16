@@ -1,4 +1,78 @@
 /* =========================
+page heading
+========================= */
+
+.page-heading {
+  text-align: center;
+}
+
+.page-heading__en {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 18px;
+  font-family: var(--font-montserrat);
+  font-size: var(--fz100);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.page-heading__en::after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 310px;
+  height: 6px;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #e95513 0%, #f29600 30%, #e95513 100%);
+  content: "";
+}
+
+.page-heading__ja {
+  margin-top: 20px;
+  font-size: var(--fz18);
+  line-height: 1;
+}
+
+@media only screen and (max-width: 899px) {
+  .page-heading__en::after {
+    width: 220px;
+    height: 5px;
+  }
+
+  .page-heading__ja {
+    margin-top: 16px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-heading__en {
+    padding-bottom: 14px;
+    font-size: 48px;
+  }
+
+  .page-heading__en::after {
+    width: 170px;
+    height: 4px;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .page-heading__en {
+    padding-bottom: 12px;
+  }
+
+  .page-heading__en::after {
+    width: 145px;
+    height: 4px;
+  }
+
+  .page-heading__ja {
+    margin-top: 10px;
+  }
+}
+
+/* =========================
 service page
 ========================= */
 
@@ -18,38 +92,6 @@ service page
   z-index: 1;
 }
 
-.service-page__heading {
-  text-align: center;
-}
-
-.service-page__heading-en {
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  padding-bottom: 18px;
-  font-family: var(--font-montserrat);
-  font-size: var(--fz100);
-  font-weight: 500;
-  line-height: 1;
-}
-
-.service-page__heading-en::after {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 310px;
-  height: 6px;
-  transform: translateX(-50%);
-  background: linear-gradient(45deg, #e95513 0%, #f29600 30%, #e95513 100%);
-  content: "";
-}
-
-.service-page__heading-ja {
-  margin-top: 20px;
-  font-size: var(--fz18);
-  line-height: 1;
-}
-
 .service-page__intro {
   margin-top: 140px;
   text-align: center;
@@ -62,9 +104,9 @@ service page
 }
 
 .service-page__lead {
+  margin-top: 20px;
   font-size: var(--fz33);
   font-weight: normal;
-  margin-top: 20px;
 }
 
 .service-page__list {
@@ -99,8 +141,8 @@ service page
 }
 
 .service-page__item-title {
-  font-size: var(--fz40);
   font-family: var(--font-yugothic);
+  font-size: var(--fz40);
   line-height: 1.4;
 }
 
@@ -144,15 +186,6 @@ service page
     padding: 120px 0 150px;
   }
 
-  .service-page__heading-en::after {
-    width: 220px;
-    height: 5px;
-  }
-
-  .service-page__heading-ja {
-    margin-top: 16px;
-  }
-
   .service-page__intro {
     margin-top: 90px;
   }
@@ -193,16 +226,6 @@ service page
   .service-page__inner {
     padding-right: 20px;
     padding-left: 20px;
-  }
-
-  .service-page__heading-en {
-    padding-bottom: 14px;
-    font-size: 48px;
-  }
-
-  .service-page__heading-en::after {
-    width: 170px;
-    height: 4px;
   }
 
   .service-page__intro {
@@ -252,20 +275,9 @@ service page
     padding-right: 16px;
     padding-left: 16px;
   }
+
   .service-page__title {
     font-size: var(--fz100);
-  }
-  .service-page__heading-en {
-    padding-bottom: 12px;
-  }
-
-  .service-page__heading-en::after {
-    width: 145px;
-    height: 4px;
-  }
-
-  .service-page__heading-ja {
-    margin-top: 10px;
   }
 
   .service-page__intro {
@@ -295,11 +307,10 @@ service page
     margin-top: 15px;
   }
 }
-
 /* service-reason */
 
 .service-reason {
-  padding: 100px 0 180px;
+  padding: 100px 0 200px;
 }
 
 .service-reason__top {
