@@ -1141,3 +1141,266 @@ company page
     margin-top: 30px;
   }
 }
+
+/* =========================
+company philosophy
+========================= */
+
+.company-philosophy {
+  padding: 150px 0;
+}
+
+.company-philosophy__heading {
+  text-align: center;
+}
+
+.company-philosophy__heading-en {
+  font-size: var(--fz20);
+  font-family: var(--font-noto);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #e95513;
+}
+
+.company-philosophy__title {
+  font-size: var(--fz100);
+  font-family: var(--font-yugothic);
+  line-height: 1.4;
+  margin-top: 30px;
+}
+
+.company-philosophy__message {
+  font-size: var(--fz40);
+  font-family: var(--font-yugothic);
+  text-align: center;
+  margin-top: 90px;
+}
+
+.company-philosophy__shape {
+  margin-top: 80px;
+}
+
+.company-philosophy__shape-title {
+  text-align: center;
+  font-family: var(--font-yugothic);
+  font-size: var(--fz40);
+  line-height: 1.4;
+}
+
+.company-philosophy__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 70px;
+  margin-top: 50px;
+}
+
+.company-philosophy__item {
+  min-width: 0;
+  text-align: center;
+}
+
+.company-philosophy__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 145px;
+}
+
+.company-philosophy__icon img {
+  display: block;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+}
+
+.company-philosophy__item:nth-child(2) .company-philosophy__icon img,
+.company-philosophy__item:nth-child(3) .company-philosophy__icon img {
+  max-width: 150px;
+}
+
+.company-philosophy__item-title {
+  position: relative;
+  display: inline-block;
+  margin-top: 16px;
+  padding: 0 18px 4px;
+  font-family: var(--font-yugothic);
+  font-size: var(--fz44);
+  line-height: 1.4;
+}
+
+.company-philosophy__item-title::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: var(--black);
+  content: "";
+}
+
+.company-philosophy__item-text {
+  font-size: var(--fz24);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+@media only screen and (max-width: 1279px) {
+  .company-philosophy {
+    padding: 120px 0;
+  }
+
+  .company-philosophy__message {
+    margin-top: 70px;
+  }
+
+  .company-philosophy__shape {
+    margin-top: 65px;
+  }
+
+  .company-philosophy__list {
+    gap: 45px;
+    margin-top: 45px;
+  }
+
+  .company-philosophy__icon {
+    height: 130px;
+  }
+
+  .company-philosophy__icon img {
+    max-width: 115px;
+  }
+
+  .company-philosophy__item:nth-child(2) .company-philosophy__icon img,
+  .company-philosophy__item:nth-child(3) .company-philosophy__icon img {
+    max-width: 135px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .company-philosophy {
+    padding: 100px 0;
+  }
+
+  .company-philosophy__title {
+    margin-top: 24px;
+  }
+
+  .company-philosophy__message {
+    margin-top: 55px;
+  }
+
+  .company-philosophy__shape {
+    margin-top: 55px;
+  }
+
+  .company-philosophy__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 70px;
+    row-gap: 55px;
+    max-width: 720px;
+    margin: 45px auto 0;
+  }
+
+  .company-philosophy__icon {
+    height: 125px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .company-philosophy {
+    padding: 80px 0 95px;
+  }
+
+  .company-philosophy__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .company-philosophy__title {
+    margin-top: 20px;
+  }
+
+  .company-philosophy__message {
+    margin-top: 42px;
+  }
+
+  .company-philosophy__shape {
+    margin-top: 48px;
+  }
+
+  .company-philosophy__list {
+    gap: 0;
+    max-width: none;
+    margin-top: 32px;
+  }
+
+  .company-philosophy__item {
+    padding: 34px 0;
+  }
+
+  .company-philosophy__icon {
+    height: 115px;
+  }
+
+  .company-philosophy__icon img {
+    max-width: 105px;
+  }
+
+  .company-philosophy__item:nth-child(2) .company-philosophy__icon img,
+  .company-philosophy__item:nth-child(3) .company-philosophy__icon img {
+    max-width: 125px;
+  }
+
+  .company-philosophy__item-title {
+    margin-top: 14px;
+  }
+
+  .company-philosophy__item-text {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .company-philosophy {
+    padding: 65px 0 80px;
+  }
+
+  .company-philosophy__inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .company-philosophy__title {
+    margin-top: 18px;
+  }
+
+  .company-philosophy__message {
+    margin-top: 34px;
+  }
+
+  .company-philosophy__shape {
+    margin-top: 30px;
+  }
+
+  .company-philosophy__list {
+    margin-top: 28px;
+  }
+
+  .company-philosophy__item {
+    padding: 20px 0;
+  }
+
+  .company-philosophy__icon {
+    height: 100px;
+  }
+
+  .company-philosophy__icon img {
+    max-width: 80px;
+  }
+
+  .company-philosophy__item:nth-child(2) .company-philosophy__icon img,
+  .company-philosophy__item:nth-child(3) .company-philosophy__icon img {
+    max-width: 100px;
+  }
+}
