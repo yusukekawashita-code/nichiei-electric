@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>GREETING | 日栄電気</title>
+  <title>SERVICE | 日栄電気</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,53 +65,116 @@
       </button>
     </div>
   </header>
-
   <main>
-    <section class="greeting-page">
-      <div class="greeting-page__heading">
-        <div class="page-heading">
-          <h1 class="page-heading__en">GREETING</h1>
-          <p class="page-heading__ja">ごあいさつ</p>
-        </div>
+    <section class="contact-page">
+      <div class="page-heading">
+        <h1 class="page-heading__en">CONTACT</h1>
+        <p class="page-heading__ja">お問い合わせ</p>
       </div>
 
-      <div class="greeting-page__body">
-        <div class="greeting-page__inner inner">
-          <div class="greeting-page__content">
-            <p>
-              この度は、弊社ホームページをご覧いただき、誠にありがとうございます。
-            </p>
+      <div class="contact-page__form-wrap">
+        <form class="contact-page__form" action="#" method="post">
+          <div class="contact-page__row">
+            <label class="contact-page__label" for="company">
+              会社名
+              <span class="contact-page__required">必須</span>
+            </label>
 
-            <p>
-              日栄電気は、電気工事を通じて地域社会の発展とお客様の安心・安全な暮らしを支えることを使命とし、一つひとつの仕事に誠実に向き合ってまいりました。
-            </p>
-
-            <p>
-              企業は決して一社だけの力で成り立つものではありません。日頃よりご愛顧いただいているお客様をはじめ、お取引先様、協力会社の皆様、そして地域の皆様など、多くの方々のご支援とご協力があってこそ、今日まで歩みを続けることができています。この場をお借りして、心より感謝申し上げます。
-            </p>
-
-            <p>
-              私たちは、お客様からいただくご期待やご要望はもちろん、時には厳しいご意見にも真摯に耳を傾け、常に技術力とサービス品質の向上に努めております。安心して任せていただける会社であり続けるため、社員一人ひとりが責任と誇りを持ち、安全第一で丁寧な施工を心掛けています。
-            </p>
-
-            <p>
-              これからも現状に満足することなく、新たな技術や時代の変化にも柔軟に対応し、皆様に信頼される企業としてさらなる成長を目指してまいります。
-            </p>
-
-            <p>
-              今後とも日栄電気に変わらぬご支援、ご愛顧を賜りますよう、よろしくお願い申し上げます。
-            </p>
-
-            <div class="greeting-page__signature">
-              <p>株式会社 日栄電気</p>
-              <p>代表取締役　植田栄治</p>
+            <div class="contact-page__field">
+              <input class="contact-page__input" type="text" id="company" name="company" required>
             </div>
           </div>
-        </div>
+
+          <div class="contact-page__row">
+            <label class="contact-page__label" for="name">
+              ご担当者
+            </label>
+
+            <div class="contact-page__field">
+              <input class="contact-page__input" type="text" id="name" name="name">
+            </div>
+          </div>
+
+          <div class="contact-page__row">
+            <label class="contact-page__label" for="zipcode">
+              郵便番号
+            </label>
+
+            <div class="contact-page__field contact-page__field--zipcode">
+              <input class="contact-page__input contact-page__input--zipcode" type="text" id="zipcode" name="zipcode"
+                inputmode="numeric" autocomplete="postal-code">
+
+              <button class="contact-page__zipcode-button" type="button">
+                郵便番号検索
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-page__row">
+            <label class="contact-page__label" for="address">
+              住所
+            </label>
+
+            <div class="contact-page__field">
+              <input class="contact-page__input" type="text" id="address" name="address" autocomplete="street-address">
+            </div>
+          </div>
+
+          <div class="contact-page__row">
+            <label class="contact-page__label" for="tel">
+              電話番号
+              <span class="contact-page__required">必須</span>
+            </label>
+
+            <div class="contact-page__field">
+              <input class="contact-page__input" type="tel" id="tel" name="tel" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="contact-page__row">
+            <label class="contact-page__label" for="email">
+              メールアドレス
+              <span class="contact-page__required">必須</span>
+            </label>
+
+            <div class="contact-page__field">
+              <input class="contact-page__input" type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="contact-page__row">
+            <label class="contact-page__label" for="email-confirm">
+              メールアドレス（確認）
+              <span class="contact-page__required">必須</span>
+            </label>
+
+            <div class="contact-page__field">
+              <input class="contact-page__input" type="email" id="email-confirm" name="email-confirm" required>
+            </div>
+          </div>
+
+          <div class="contact-page__row contact-page__row--textarea">
+            <label class="contact-page__label" for="message">
+              お問い合わせの内容
+              <span class="contact-page__required">必須</span>
+            </label>
+
+            <div class="contact-page__field">
+              <textarea class="contact-page__textarea" id="message" name="message" required></textarea>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+      <div class="contact-page__submit">
+        <button class="contact-page__submit-button" type="submit">
+          送信
+        </button>
       </div>
     </section>
   </main>
-
 
   <footer class="footer">
     <div class="footer__inner">
