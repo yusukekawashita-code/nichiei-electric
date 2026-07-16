@@ -20,6 +20,7 @@ common
   --fz40: clamp(1.25rem, 0.962rem + 1.28vw, 2.5rem);
   --fz44: clamp(1.313rem, 0.981rem + 1.47vw, 2.75rem);
   --fz60: clamp(1.5rem, 0.981rem + 2.31vw, 3.75rem);
+  --fz70: clamp(1.563rem, 0.913rem + 2.88vw, 4.375rem);
   --fz80: clamp(1.25rem, 0.385rem + 3.85vw, 5rem);
   --fz90: clamp(1.375rem, 0.394rem + 4.36vw, 5.625rem);
   --fz100: clamp(1.875rem, 0.865rem + 4.49vw, 6.25rem);
