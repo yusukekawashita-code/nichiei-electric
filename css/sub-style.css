@@ -1946,8 +1946,7 @@ recruit page
 ========================= */
 
 .recruit-page {
-  padding: 200px 0 180px;
-  border-bottom: 7px solid var(--white);
+  padding-top: 200px;
   background-color: var(--bgColor);
 }
 
@@ -2103,7 +2102,7 @@ recruit page
 
 @media only screen and (max-width: 1279px) {
   .recruit-page {
-    padding: 160px 0 150px;
+    padding-top: 160px;
   }
 
   .recruit-page__intro {
@@ -2130,7 +2129,7 @@ recruit page
 
 @media only screen and (max-width: 899px) {
   .recruit-page {
-    padding: 130px 0 120px;
+    padding-top: 130px;
   }
 
   .recruit-page__inner {
@@ -2195,7 +2194,7 @@ recruit page
 
 @media only screen and (max-width: 767px) {
   .recruit-page {
-    padding: 90px 0 95px;
+    padding-top: 90px;
     border-bottom-width: 5px;
   }
 
@@ -2257,7 +2256,7 @@ recruit page
 
 @media only screen and (max-width: 499px) {
   .recruit-page {
-    padding: 70px 0 75px;
+    padding-top: 70px;
   }
 
   .recruit-page__inner {
@@ -2315,7 +2314,7 @@ recruit page
 
   .recruit-page__contact {
     gap: 16px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .recruit-page__contact-button {
@@ -2323,7 +2322,7 @@ recruit page
     margin: 0 auto;
     justify-content: center;
     gap: 14px;
-    min-height: 55px;
+    min-height: 50px;
     padding: 14px 22px;
   }
 
@@ -2338,5 +2337,176 @@ recruit page
 @media only screen and (max-width: 399px) {
   .recruit-page__row:last-child .recruit-page__term::after {
     bottom: -131px;
+  }
+}
+
+/* recruit gallery */
+
+.recruit-gallery {
+  padding: 180px 0;
+  border-bottom: 7px solid var(--white);
+  background-color: var(--bgColor);
+}
+
+.recruit-gallery__inner {
+  max-width: 70%;
+}
+
+.recruit-gallery__image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.recruit-gallery__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.recruit-gallery__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+}
+
+.recruit-gallery__instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 380px;
+  min-height: 70px;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  color: var(--white);
+  background-color: #e95513;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.recruit-gallery__instagram:hover {
+  opacity: 0.85;
+  transform: translateY(-3px);
+}
+
+.recruit-gallery__instagram-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 36px;
+  height: auto;
+  object-fit: contain;
+}
+
+.recruit-gallery__instagram-text {
+  font-family: var(--font-montserrat);
+  font-size: var(--fz20);
+}
+
+@media only screen and (max-width: 1279px) {
+  .recruit-gallery {
+    padding: 140px 0;
+  }
+
+  .recruit-gallery__inner {
+    max-width: 82%;
+  }
+
+  .recruit-gallery__button {
+    margin-top: 85px;
+  }
+
+  .recruit-gallery__instagram {
+    width: 340px;
+    min-height: 68px;
+  }
+
+  .recruit-gallery__instagram-icon {
+    width: 32px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .recruit-gallery {
+    padding: 110px 0;
+  }
+
+  .recruit-gallery__inner {
+    max-width: 90%;
+  }
+
+  .recruit-gallery__button {
+    margin-top: 65px;
+  }
+
+  .recruit-gallery__instagram {
+    width: 300px;
+    min-height: 64px;
+    padding: 14px 22px;
+  }
+
+  .recruit-gallery__instagram-icon {
+    width: 29px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .recruit-gallery {
+    padding: 80px 0 90px;
+    border-bottom-width: 5px;
+  }
+
+  .recruit-gallery__inner {
+    max-width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+
+  .recruit-gallery__button {
+    margin-top: 48px;
+  }
+
+  .recruit-gallery__instagram {
+    width: 270px;
+    min-height: 60px;
+    gap: 12px;
+    padding: 13px 20px;
+  }
+
+  .recruit-gallery__instagram-icon {
+    width: 26px;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .recruit-gallery {
+    padding: 60px 0 70px;
+  }
+
+  .recruit-gallery__inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .recruit-gallery__button {
+    margin-top: 30px;
+  }
+
+  .recruit-gallery__instagram {
+    width: 240px;
+    min-height: 56px;
+    padding: 12px 18px;
+  }
+
+  .recruit-gallery__instagram-icon {
+    width: 24px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .recruit-gallery__instagram {
+    width: 220px;
   }
 }
