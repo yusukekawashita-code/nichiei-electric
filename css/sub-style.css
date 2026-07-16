@@ -1404,3 +1404,165 @@ company philosophy
     max-width: 100px;
   }
 }
+/* =========================
+company mission
+========================= */
+
+.company-mission {
+  padding: 120px 0;
+  background-color: var(--bgColor);
+}
+
+.company-mission__heading {
+  text-align: center;
+}
+
+.company-mission__heading-en {
+  font-size: var(--fz20);
+  font-family: var(--font-noto);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #e95513;
+}
+
+.company-mission__title {
+  font-family: var(--font-yugothic);
+  font-size: var(--fz100);
+  line-height: 1.4;
+  margin-top: 30px;
+}
+
+.company-mission__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 70px;
+  margin-top: 135px;
+}
+
+.company-mission__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.company-mission__square {
+  display: block;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--black);
+  box-sizing: border-box;
+}
+
+.company-mission__text {
+  font-family: var(--font-yugothic);
+  font-size: var(--fz40);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1279px) {
+  .company-mission {
+    padding: 100px 0;
+  }
+
+  .company-mission__list {
+    gap: 45px;
+    margin-top: 105px;
+  }
+
+  .company-mission__square {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .company-mission {
+    padding: 90px 0;
+  }
+
+  .company-mission__title {
+    margin-top: 24px;
+  }
+
+  .company-mission__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 70px;
+    row-gap: 45px;
+    max-width: 700px;
+    margin: 75px auto 0;
+  }
+
+  .company-mission__square {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .company-mission {
+    padding: 75px 0 85px;
+  }
+
+  .company-mission__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .company-mission__title {
+    margin-top: 20px;
+  }
+
+  .company-mission__list {
+    gap: 0;
+    max-width: none;
+    margin-top: 55px;
+  }
+
+  .company-mission__item {
+    justify-content: center;
+    padding: 22px 12px;
+  }
+
+  .company-mission__square {
+    width: 24px;
+    height: 24px;
+  }
+
+  .company-mission__text {
+    white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .company-mission {
+    padding: 60px 0 70px;
+  }
+
+  .company-mission__inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .company-mission__title {
+    margin-top: 18px;
+  }
+
+  .company-mission__list {
+    margin-top: 24px;
+  }
+
+  .company-mission__item {
+    padding: 18px 8px;
+  }
+
+  .company-mission__square {
+    width: 21px;
+    height: 21px;
+  }
+}
