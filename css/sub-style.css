@@ -295,3 +295,259 @@ service page
     margin-top: 15px;
   }
 }
+
+/* service-reason */
+
+.service-reason {
+  padding: 100px 0 180px;
+}
+
+.service-reason__top {
+  display: grid;
+  grid-template-columns: 48% minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  padding-left: 20%;
+}
+
+.service-reason__heading {
+  position: relative;
+  z-index: 1;
+}
+
+.service-reason__heading-en {
+  font-family: var(--font-noto);
+  font-size: var(--fz20);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #e95513;
+}
+
+.service-reason__title {
+  font-family: var(--font-yugothic);
+  font-size: var(--fz100);
+  line-height: 1.65;
+  margin-top: 36px;
+}
+
+.service-reason__image {
+  height: 600px;
+}
+
+.service-reason__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-reason__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 70px;
+  max-width: 1200px;
+  margin: 75px auto 0;
+  padding: 0 20px;
+}
+
+.service-reason__item {
+  min-width: 0;
+}
+
+.service-reason__number {
+  color: #e95513;
+  font-family: var(--font-montserrat);
+  font-size: var(--fz24);
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.service-reason__item-title {
+  font-family: var(--font-yugothic);
+  font-size: var(--fz40);
+  white-space: nowrap;
+  line-height: 1.4;
+  margin-top: 20px;
+}
+
+.service-reason__item-en {
+  font-family: var(--font-montserrat);
+  font-size: var(--fz18);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin-top: 4px;
+}
+
+.service-reason__item-text {
+  font-size: var(--fz20);
+  font-weight: 600;
+  line-height: 1.65;
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: 1279px) {
+  .service-reason {
+    padding: 90px 0 150px;
+  }
+
+  .service-reason__top {
+    grid-template-columns: 46% minmax(0, 1fr);
+    padding-left: 12%;
+  }
+
+  .service-reason__title {
+    margin-top: 30px;
+  }
+
+  .service-reason__image {
+    height: 520px;
+  }
+
+  .service-reason__list {
+    gap: 50px;
+    max-width: 1080px;
+    margin-top: 65px;
+  }
+
+  .service-reason__item-title {
+    font-size: 30px;
+  }
+
+  .service-reason__item-text {
+    margin-top: 22px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .service-reason {
+    padding: 80px 0 120px;
+  }
+
+  .service-reason__top {
+    grid-template-columns: 44% minmax(0, 1fr);
+    padding-left: 7%;
+  }
+
+  .service-reason__title {
+    margin-top: 24px;
+  }
+
+  .service-reason__image {
+    height: 430px;
+  }
+
+  .service-reason__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+    row-gap: 55px;
+    max-width: 720px;
+    margin-top: 60px;
+  }
+
+  .service-reason__item-title {
+    white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .service-reason {
+    padding: 65px 0 95px;
+  }
+
+  .service-reason__top {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .service-reason__heading {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .service-reason__title {
+    margin-top: 20px;
+  }
+
+  .service-reason__image {
+    width: calc(100% - 20px);
+    height: 360px;
+    margin-top: 45px;
+    margin-left: auto;
+  }
+
+  .service-reason__list {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: none;
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+
+  .service-reason__item {
+    padding: 30px 0;
+  }
+
+  .service-reason__item-title {
+    margin-top: 14px;
+    white-space: normal;
+  }
+
+  .service-reason__item-en {
+    margin-top: 3px;
+  }
+
+  .service-reason__item-text {
+    margin-top: 20px;
+  }
+
+  .service-reason__item-text br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .service-reason {
+    padding: 55px 0 80px;
+  }
+
+  .service-reason__heading {
+    padding: 0 16px;
+  }
+
+  .service-reason__heading-en {
+    font-size: 12px;
+  }
+
+  .service-reason__item-title {
+    font-size: 26px;
+    margin-top: 8px;
+  }
+  .service-reason__title {
+    margin-top: 18px;
+  }
+
+  .service-reason__image {
+    width: calc(100% - 16px);
+    height: 280px;
+    margin-top: 36px;
+  }
+
+  .service-reason__list {
+    margin-top: 16px;
+    padding: 0 16px;
+  }
+
+  .service-reason__item {
+    padding: 20px 0;
+  }
+
+  .service-reason__item-text {
+    margin-top: 12px;
+  }
+}
