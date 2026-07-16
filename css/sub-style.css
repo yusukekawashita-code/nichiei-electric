@@ -562,3 +562,133 @@ service page
     margin-top: 12px;
   }
 }
+/* =========================
+greeting page
+========================= */
+
+.greeting-page {
+  background-color: var(--white);
+}
+
+.greeting-page__heading {
+  padding: 200px 0 110px;
+  background-color: var(--bgColor);
+}
+
+.greeting-page__body {
+  padding: 60px 0 100px;
+  border-top: 7px solid var(--white);
+  border-bottom: 7px solid var(--white);
+  background-color: var(--bgColor);
+}
+
+.greeting-page__inner {
+  max-width: 1000px;
+}
+
+.greeting-page__content {
+  font-family: var(--font-yugothic);
+}
+
+.greeting-page__content > p {
+  font-size: var(--fz20);
+  font-weight: normal;
+  line-height: 2;
+}
+
+.greeting-page__content > p + p {
+  margin-top: 36px;
+}
+
+.greeting-page__signature {
+  width: fit-content;
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+.greeting-page__signature p {
+  font-size: var(--fz20);
+  font-weight: normal;
+  line-height: 2;
+  text-align: right;
+}
+
+@media only screen and (max-width: 1279px) {
+  .greeting-page__heading {
+    padding: 160px 0 90px;
+  }
+
+  .greeting-page__body {
+    padding: 50px 0 90px;
+  }
+
+  .greeting-page__inner {
+    max-width: 800px;
+  }
+
+  .greeting-page__content > p + p {
+    margin-top: 32px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .greeting-page__heading {
+    padding: 130px 0 70px;
+  }
+
+  .greeting-page__body {
+    padding: 45px 0 80px;
+  }
+
+  .greeting-page__inner {
+    max-width: 640px;
+  }
+
+  .greeting-page__content > p + p {
+    margin-top: 28px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .greeting-page__heading {
+    padding: 90px 0 50px;
+  }
+
+  .greeting-page__body {
+    padding: 40px 0 60px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+  }
+
+  .greeting-page__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .greeting-page__content > p + p {
+    margin-top: 24px;
+  }
+
+  .greeting-page__signature {
+    margin-top: 45px;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .greeting-page__heading {
+    padding: 70px 0 40px;
+  }
+
+  .greeting-page__body {
+    padding: 32px 0 50px;
+  }
+
+  .greeting-page__inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .greeting-page__content > p + p {
+    margin-top: 20px;
+  }
+}
